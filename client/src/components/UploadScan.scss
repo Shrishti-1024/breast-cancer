@@ -1,0 +1,426 @@
+/* ===============================
+   PROFESSIONAL HEALTHCARE UI
+================================*/
+
+$primary:#153147;
+$accent:#2b7bbb;
+$bg:#f5f8fb;
+$card:#ffffff;
+$text:#232a2f;
+$muted:#8b9aa3;
+$border:#e5edf3;
+
+/* ===============================
+   PAGE BACKGROUND
+================================*/
+
+.uploadscan-wrapper {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #f7fbff 0%, #eef5fb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* animated glow background */
+
+.uploadscan-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba($accent, 0.15), transparent 70%);
+    top: -200px;
+    left: -200px;
+    animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+.uploadscan-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba($accent, 0.12), transparent 70%);
+    bottom: -200px;
+    right: -200px;
+    animation: floatOrb 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(40px);
+    }
+}
+
+
+/* ===============================
+   MAIN CONTAINER
+================================*/
+
+.uploadscan-inner {
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ===============================
+   HERO HEADER
+================================*/
+
+.uploadscan-header {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+    background: $card;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid $border;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.header-text {
+    .eyebrow {
+        text-transform: uppercase;
+        font-size: .75rem;
+        letter-spacing: .15em;
+        color: $accent;
+        font-weight: 600;
+        margin-bottom: .4rem;
+    }
+    h1 {
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: .4rem;
+    }
+    .subcopy {
+        font-size: .92rem;
+        color: $muted;
+        line-height: 1.6;
+    }
+}
+
+.header-lottie {
+    width: 200px;
+    justify-self: end;
+}
+
+
+/* ===============================
+   CARD GRID
+================================*/
+
+.uploadscan-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 1.8rem;
+}
+
+.upload-card,
+.survey-card {
+    background: $card;
+    border-radius: 16px;
+    border: 1px solid $border;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: .25s ease;
+}
+
+.upload-card:hover,
+.survey-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===============================
+   CARD HEADER
+================================*/
+
+.card-header {
+    padding: 1.5rem 1.6rem .8rem;
+    h2 {
+        font-size: 1.25rem;
+        color: $text;
+        margin-bottom: .3rem;
+    }
+    p {
+        font-size: .9rem;
+        color: $muted;
+    }
+}
+
+.card-body {
+    padding: 1rem 1.6rem 1.6rem;
+}
+
+
+/* ===============================
+   IMAGE PREVIEW
+================================*/
+
+.preview-img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    border: 1px solid $border;
+    margin: 1rem 0;
+}
+
+
+/* ===============================
+   PROGRESS BAR
+================================*/
+
+.progress-bar {
+    height: 8px;
+    background: #eaf0f6;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: .8rem 0;
+    .progress {
+        height: 100%;
+        background: linear-gradient(90deg, $accent, $primary);
+        transition: width .4s ease;
+    }
+}
+
+
+/* ===============================
+   BUTTONS
+================================*/
+
+.primary-btn {
+    background: linear-gradient(135deg, $primary, $accent);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: .65rem 1.5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+    box-shadow: 0 6px 18px rgba(21, 49, 71, 0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(21, 49, 71, 0.35);
+}
+
+.secondary-btn {
+    border: 1px solid $border;
+    border-radius: 999px;
+    padding: .55rem 1.2rem;
+    background: white;
+    cursor: pointer;
+}
+
+
+/* ===============================
+   RESULT PANEL
+================================*/
+
+.result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: .9rem;
+}
+
+.result.benign {
+    background: #e9f9ef;
+    color: #0d6832;
+}
+
+.result.malignant {
+    background: #fdeaea;
+    color: #842029;
+}
+
+
+/* ===============================
+   SURVEY SECTION
+================================*/
+
+.survey-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+/* progress */
+
+.survey-progress-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    color: $muted;
+}
+
+.survey-progress-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: #e9eef4;
+    .survey-progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, $accent, $primary);
+        border-radius: 999px;
+        transition: width .4s ease;
+        box-shadow: 0 0 10px rgba(43, 123, 187, .4);
+    }
+}
+
+
+/* ===============================
+   QUESTION CARD
+================================*/
+
+.survey-step {
+    border: 1px solid $border;
+    border-radius: 12px;
+    padding: 1.2rem;
+    background: #f9fbfd;
+}
+
+.survey-question-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $primary;
+}
+
+.survey-question-desc {
+    font-size: .85rem;
+    color: $muted;
+    margin-bottom: .9rem;
+}
+
+
+/* ===============================
+   OPTION BUTTONS
+================================*/
+
+.survey-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: .7rem;
+}
+
+.survey-option-card {
+    padding: .6rem .8rem;
+    border-radius: 8px;
+    border: 1px solid $border;
+    background: white;
+    font-size: .88rem;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.survey-option-card:hover {
+    border-color: $accent;
+}
+
+.survey-option-card.selected {
+    border: 2px solid $accent;
+    background: #eef6fb;
+    box-shadow: 0 4px 12px rgba(43, 123, 187, .15);
+    transform: scale(1.02);
+}
+
+
+/* ===============================
+   NAVIGATION BUTTONS
+================================*/
+
+.survey-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $border;
+}
+
+.nav-ghost-btn {
+    background: white;
+    border: 1px solid $border;
+    color: $muted;
+    border-radius: 999px;
+    padding: .55rem 1.2rem;
+    font-size: .85rem;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.nav-ghost-btn:hover {
+    background: #eef5fb;
+    border-color: $accent;
+    color: $primary;
+}
+
+.nav-primary-btn {
+    background: linear-gradient(135deg, $primary, $accent);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: .6rem 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(21, 49, 71, .25);
+}
+
+.nav-primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(21, 49, 71, .35);
+}
+
+
+/* ===============================
+   LOTTIE POSITIONS
+================================*/
+
+.survey-lottie {
+    width: 150px;
+    align-self: center;
+}
+
+.corner-lottie {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 110px;
+    opacity: .85;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================*/
+
+@media(max-width:900px) {
+    .uploadscan-wrapper {
+        margin-left: 70px;
+        padding: 1.5rem;
+    }
+    .uploadscan-content {
+        grid-template-columns: 1fr;
+    }
+    .uploadscan-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .header-lottie {
+        justify-self: center;
+    }
+}

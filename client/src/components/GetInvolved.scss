@@ -1,0 +1,115 @@
+/* ===== Brand Palette ===== */
+
+$ivory: #F9F8F7;
+$almond: #EDEAE4;
+$mist: #ADB8BB;
+$navy: #153147;
+$noir: #232A2F;
+$accent: #7C3AED;
+$accent-soft: #E4D9FF;
+$shadow: rgba(21, 49, 71, 0.15);
+
+/* ===== Get Involved Section ===== */
+
+.get-involved-section {
+    background: linear-gradient(135deg, $ivory, $almond);
+    padding: 4rem 5%;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+    /* Soft floating glow background effect */
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 130%;
+        height: 130%;
+        background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+        z-index: 0;
+        pointer-events: none;
+    }
+    h2 {
+        font-size: 2.4rem;
+        color: $navy;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        position: relative;
+        z-index: 2;
+    }
+    .subtitle {
+        font-size: 1rem;
+        color: $mist;
+        margin-bottom: 2.5rem;
+        position: relative;
+        z-index: 2;
+    }
+    .involve-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+    .involve-card {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: 0 8px 22px $shadow;
+        max-width: 320px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        border: 1px solid rgba($mist, 0.3);
+        backdrop-filter: blur(8px);
+        &:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(21, 49, 71, 0.22);
+            background: linear-gradient(145deg, $ivory, $accent-soft);
+            border-color: $navy;
+        }
+        .icon {
+            font-size: 2.4rem;
+            color: $accent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(124, 58, 237, 0.25);
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: $noir;
+            font-weight: 600;
+        }
+        p {
+            font-size: 0.95rem;
+            color: $mist;
+            margin-bottom: 1.2rem;
+            line-height: 1.55;
+        }
+        .cta-button {
+            background: $navy;
+            color: $ivory;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            &:hover {
+                background: $noir;
+                transform: scale(1.05);
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .involve-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+        .involve-card {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+// HowItWorks.scss
+$home-bg: #F7F4EF;
+$accent-purple: #7c3aed;
+$text-main: #153147;
+$text-muted: #4b5563;
+.how-it-works-container {
+    position: relative;
+    padding: 4.5rem 6%;
+    overflow: hidden;
+    color: $text-main;
+    background: radial-gradient(circle at top, rgba(124, 58, 237, 0.07), transparent 60%), $home-bg; // ← same as hero
+    .main-heading,
+    .sub-text,
+    .steps-with-arrows {
+        position: relative;
+        z-index: 1;
+    }
+    .main-heading {
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: $text-main;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .sub-text {
+        text-align: center;
+        font-size: 1.05rem;
+        color: $text-muted;
+        margin-bottom: 2.2rem;
+        max-width: 640px;
+        margin-inline: auto;
+    }
+    .steps-with-arrows {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1.4rem;
+        .card {
+            width: 230px;
+            min-height: 240px;
+            background: #ffffff;
+            padding: 1.6rem 1.4rem;
+            border-radius: 1.4rem;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            .icon {
+                font-size: 2.4rem;
+                color: $accent-purple;
+                margin-bottom: 0.9rem;
+            }
+            h3 {
+                font-size: 1.05rem;
+                font-weight: 600;
+                color: $text-main;
+                margin-bottom: 0.4rem;
+            }
+            p {
+                font-size: 0.9rem;
+                color: $text-muted;
+                line-height: 1.5;
+            }
+            &:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+                border-color: rgba(124, 58, 237, 0.5);
+            }
+        }
+        .arrow {
+            font-size: 2rem;
+            color: $accent-purple;
+            margin: 0 0.5rem;
+            transform: translateY(-5px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-container {
+        padding: 3rem 1.5rem;
+        .steps-with-arrows {
+            flex-direction: column;
+            .arrow {
+                transform: rotate(90deg);
+                margin: 0.5rem 0;
+            }
+            .card {
+                width: 100%;
+                max-width: 320px;
+                margin-inline: auto;
+            }
+        }
+    }
+}

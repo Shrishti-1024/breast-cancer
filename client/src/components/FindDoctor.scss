@@ -1,0 +1,172 @@
+/* ===== Professional palette tokens ===== */
+
+$ivory: #F9F8F7;
+$almond: #EDEAE4;
+$mist: #ADB8BB;
+$navy: #153147;
+$noir: #232A2F;
+
+/* Root of the page – shift everything to the right of the sidebar */
+
+.find-doctor {
+    margin-left: 250px; // same as your sidebar width
+    padding: 2rem 2rem 3rem;
+    min-height: 100vh;
+    background: $ivory;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+        margin-left: 78px; // if your sidebar collapses to narrow width
+        padding: 1.5rem 1.2rem 2rem;
+    }
+}
+
+
+/* Header section */
+
+.find-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 0 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $noir;
+    .header-animation {
+        flex: 0 0 250px;
+        max-width: 250px;
+        svg,
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+    .header-text {
+        max-width: 600px;
+        h2 {
+            font-size: 2.2rem;
+            color: $navy;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.05rem;
+            color: $mist;
+            line-height: 1.6;
+        }
+    }
+}
+
+
+/* Card grid */
+
+.doctor-list {
+    margin-top: 2rem;
+    padding: 2rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+
+/* Individual doctor card */
+
+.doctor-card {
+    background: $almond;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.25s ease;
+    border: 1px solid rgba(173, 184, 187, 0.5); // mist-ish
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 28px rgba(21, 49, 71, 0.35); // navy glow
+        border-color: $navy;
+    }
+    .doctor-avatar {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: block;
+        border: 4px solid $ivory;
+        box-shadow: 0 0 15px rgba(21, 49, 71, 0.5);
+        animation: glowPulse 2.5s infinite ease-in-out;
+    }
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $noir;
+    }
+    .specialization {
+        color: $mist;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    .contact-label {
+        font-weight: 600;
+        color: $noir;
+    }
+    .contact-link {
+        color: $noir;
+        opacity: 0.85;
+    }
+    .profile-link {
+        color: $navy;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: color 0.2s ease, border-color 0.2s ease;
+        &:hover {
+            color: darken($navy, 5%);
+            border-color: $navy;
+        }
+    }
+    .book-btn {
+        background: $navy;
+        color: $ivory;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 0.8rem;
+        font-weight: 500;
+        transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        &:hover {
+            background: $noir;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+
+/* Navy-based glow for avatar */
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(21, 49, 71, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(21, 49, 71, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(21, 49, 71, 0.4);
+    }
+}
+
+
+/* Mobile header stacking */
+
+@media (max-width: 768px) {
+    .find-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        .header-text {
+            text-align: center;
+        }
+    }
+}

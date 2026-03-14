@@ -1,0 +1,151 @@
+/* ===== Brand Palette ===== */
+
+$ivory: #F9F8F7;
+$almond: #EDEAE4;
+$mist: #ADB8BB;
+$navy: #153147;
+$noir: #232A2F;
+$shadow: rgba(21, 49, 71, 0.15);
+
+/* ===== FAQ Section ===== */
+
+.faq-section {
+    background: linear-gradient(to right, $ivory, $almond);
+    padding: 5rem 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    // Soft background medical scan image
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: url('https://makna.org.my/wp-content/uploads/2022/03/Scan.png') no-repeat center center;
+        background-size: cover;
+        opacity: 0.04; // subtle, neutral overlay
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+    h2 {
+        font-size: 2.8rem;
+        color: $navy;
+        margin-bottom: 0.3rem;
+        position: relative;
+        z-index: 1;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+    .subtitle {
+        color: $mist;
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+        z-index: 1;
+    }
+    .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+    .faq-item {
+        background: #ffffff;
+        border-radius: 1.2rem;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 12px 28px $shadow;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid rgba($mist, 0.35);
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 16px 34px rgba(21, 49, 71, 0.22);
+            border-color: $navy;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            /* this is the pill that was pink before */
+            padding: 1rem 1.2rem;
+            border-radius: 0.8rem;
+            background: $almond;
+            transition: background 0.3s ease, color 0.3s ease;
+            h4 {
+                margin: 0;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: $noir;
+                transition: color 0.3s ease;
+            }
+            .icon {
+                transition: transform 0.3s ease, color 0.3s ease;
+                color: $navy;
+                font-size: 1.2rem;
+            }
+            .rotate {
+                transform: rotate(180deg);
+            }
+        }
+        /* when hovering the card, turn the question bar navy */
+        &:hover .faq-question {
+            background: $navy;
+            h4 {
+                color: $ivory;
+            }
+            .icon {
+                color: $ivory;
+            }
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding-top 0.3s ease;
+            padding-top: 0;
+            p {
+                font-size: 1rem;
+                color: $mist;
+                margin-top: 1rem;
+                line-height: 1.6;
+            }
+        }
+        &.open {
+            .faq-answer {
+                max-height: 500px;
+                padding-top: 0.7rem;
+            }
+            /* keep navy bar when item is open */
+            .faq-question {
+                background: $navy;
+                h4 {
+                    color: $ivory;
+                }
+                .icon {
+                    color: $ivory;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 2rem;
+        }
+        .faq-container {
+            padding: 0 0.5rem;
+        }
+        .faq-item {
+            padding: 1.2rem 1.4rem;
+        }
+        .faq-question h4 {
+            font-size: 1rem;
+        }
+        .faq-answer p {
+            font-size: 0.95rem;
+        }
+    }
+}

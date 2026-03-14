@@ -1,0 +1,183 @@
+// same palette as navbar
+$white: #ffffff;
+$dark: #111111;
+$muted: #4b5563;
+$border: #e5e7eb;
+$accent: #7c3aed;
+$accent-hover: #6d28d9;
+$navy: #153147;
+.free-camps {
+    padding: 72px 20px 80px;
+    background: linear-gradient(135deg, #f9fafb, #eef2ff);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: $dark;
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    // ---------- header ----------
+    .header-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 40px;
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: $navy;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .lottie-animation {
+            filter: drop-shadow(0 6px 14px rgba(124, 58, 237, 0.25));
+            transform: scale(1);
+            transition: transform 0.4s ease, filter 0.4s ease;
+            &:hover {
+                transform: scale(1.05);
+                filter: drop-shadow(0 10px 20px rgba(124, 58, 237, 0.35));
+            }
+        }
+        .intro {
+            font-size: 1rem;
+            max-width: 720px;
+            color: $muted;
+            line-height: 1.6;
+        }
+    }
+    // ---------- camp cards ----------
+    .camp-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 56px;
+        .camp-card {
+            background: $white;
+            border-radius: 18px;
+            padding: 24px 22px;
+            width: 320px;
+            border: 1px solid $border;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            &:hover {
+                transform: translateY(-6px);
+                border-color: rgba(124, 58, 237, 0.25);
+                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+            }
+            h3 {
+                font-size: 1.1rem;
+                color: $navy;
+                margin-bottom: 14px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 0.95rem;
+                margin-bottom: 8px;
+                color: $muted;
+                strong {
+                    color: $dark;
+                }
+            }
+            .register-btn {
+                margin-top: 14px;
+                padding: 10px 20px;
+                background: $accent;
+                color: $white;
+                border-radius: 999px;
+                font-weight: 600;
+                font-size: 0.9rem;
+                text-decoration: none;
+                text-align: center;
+                border: none;
+                box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
+                transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+                &:hover {
+                    background: $accent-hover;
+                    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.55);
+                    transform: translateY(-1px);
+                }
+                &.secondary {
+                    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+                }
+            }
+        }
+    }
+    // ---------- Gorakhpur block ----------
+    .gorakhpur-section {
+        margin-bottom: 3rem;
+        text-align: center;
+        padding: 24px 20px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px dashed rgba(124, 58, 237, 0.35);
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $navy;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 0.95rem;
+            color: $muted;
+            max-width: 640px;
+            margin: 0.25rem auto 0.25rem;
+        }
+        .gorakhpur-empty {
+            font-style: italic;
+        }
+    }
+    // notification button
+    .notify-btn {
+        background: $accent;
+        border: none;
+        color: $white;
+        padding: 10px 24px;
+        border-radius: 999px;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 0.9rem;
+        box-shadow: 0 8px 20px rgba(124, 58, 237, 0.45);
+        transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        margin-top: 1.2rem;
+        &:hover {
+            background: $accent-hover;
+            box-shadow: 0 10px 26px rgba(124, 58, 237, 0.6);
+            transform: translateY(-1px);
+        }
+    }
+    .notify-info {
+        color: $accent;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    // ---------- responsive ----------
+    @media (max-width: 960px) {
+        .camp-list {
+            gap: 18px;
+            .camp-card {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+        .header-section h2 {
+            font-size: 1.9rem;
+        }
+        .header-section .intro {
+            font-size: 0.95rem;
+        }
+    }
+    @media (max-width: 600px) {
+        padding: 64px 16px 72px;
+        .gorakhpur-section {
+            padding: 20px 16px;
+        }
+    }
+}

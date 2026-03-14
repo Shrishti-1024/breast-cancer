@@ -1,0 +1,316 @@
+/* ===========================
+   PAGE WRAPPER
+=========================== */
+
+.hero-wrapper {
+    background: #f7f4ef;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ===========================
+   HERO BANNER
+=========================== */
+
+.hero-banner {
+    position: relative;
+    height: 300px;
+    background-image: url("https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=2000");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(2px);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    h1 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #111;
+        line-height: 1.2;
+    }
+}
+
+
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+.hero-services {
+    max-width: 1200px;
+    margin: -60px auto 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 0 5%;
+}
+
+
+/* ===========================
+   LEFT SERVICE GRID
+=========================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    transition: all .25s ease;
+    cursor: pointer;
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+    p {
+        font-size: .85rem;
+        color: #666;
+    }
+    .icon {
+        font-size: 28px;
+    }
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* individual colors */
+
+.appointment {
+    background: #f6f8ef;
+}
+
+.hospital {
+    background: #eef7fb;
+}
+
+.speciality {
+    background: #f4f1fb;
+}
+
+.doctors {
+    background: #fbf1ef;
+}
+
+
+/* ===========================
+   RIGHT BOOKING PANEL
+=========================== */
+
+.booking-panel {
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+}
+
+.booking-cards {
+    display: flex;
+    gap: 18px;
+}
+
+.booking-card {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: .25s;
+    .booking-icon {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px) {
+    .hero-services {
+        grid-template-columns: 1fr;
+    }
+    .booking-cards {
+        flex-direction: column;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-wrapper {
+    background: #f7f4ef;
+    padding-bottom: 60px;
+}
+
+
+/* HERO BANNER */
+
+.hero-banner {
+    position: relative;
+    height: 320px;
+    background-image: url("https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=2000");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    h1 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #111;
+        line-height: 1.25;
+    }
+}
+
+
+/* SERVICES SECTION */
+
+.hero-services {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 0 5%;
+}
+
+
+/* SERVICE GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 22px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    transition: .25s;
+    cursor: pointer;
+    h3 {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: .85rem;
+        color: #666;
+    }
+    .icon {
+        font-size: 28px;
+    }
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.appointment {
+    background: #f6f8ef;
+}
+
+.hospital {
+    background: #eef7fb;
+}
+
+.speciality {
+    background: #f4f1fb;
+}
+
+.doctors {
+    background: #fbf1ef;
+}
+
+
+/* RIGHT PANEL */
+
+.booking-panel h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.booking-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.booking-card {
+    flex: 1;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    padding: 28px;
+    transition: .25s;
+    cursor: pointer;
+    .booking-icon {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+}
+
+.booking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+    .hero-services {
+        grid-template-columns: 1fr;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .booking-cards {
+        flex-direction: column;
+    }
+}

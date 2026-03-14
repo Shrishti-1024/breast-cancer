@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Test Page</title>
+</head>
+<body>
+  <h1>Video Test</h1>
+
+  <video id="myVideo" width="320" height="240" controls>
+    <source src="Today_is_all_about_V1.mp4" type="video/mp4">
+    
+    <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+    Your browser does not support the video tag.
+  </video>
+
+  <button onclick="document.getElementById('myVideo').muted = false;">Unmute</button>
+</body>
+</html>

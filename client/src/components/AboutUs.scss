@@ -1,0 +1,281 @@
+/* === Professional palette tokens === */
+
+$ivory: #F9F8F7;
+$almond: #EDEAE4;
+$mist: #ADB8BB;
+$navy: #153147;
+$noir: #232A2F;
+
+/* A more modern, spacious, and professional aesthetic */
+
+.about-us-section {
+    font-family: "Segoe UI", sans-serif;
+    color: $noir;
+    .intro-banner {
+        position: relative;
+        background: linear-gradient(135deg, $navy, $noir);
+        padding: 6rem 2rem 8rem;
+        text-align: center;
+        animation: fadeIn 1.5s ease;
+        overflow: hidden;
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: $ivory;
+            margin-bottom: 1rem;
+            animation: slideDown 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: $almond;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease 0.5s forwards;
+            opacity: 0;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+            clip-path: polygon(0 40%, 100% 60%, 100% 100%, 0 100%);
+            transform: scaleY(-1);
+            opacity: 0.12;
+            animation: waveMove 20s infinite linear;
+            filter: grayscale(100%);
+        }
+    }
+    .container {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+        background: $ivory;
+    }
+    /* Mission Section */
+    .mission-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-bottom: 6rem;
+        background: $almond;
+        border-radius: 2rem;
+        padding: 3rem;
+        flex-wrap: wrap;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        .mission-text {
+            flex: 1;
+            h2 {
+                font-size: clamp(1.8rem, 4vw, 2.8rem);
+                margin-bottom: 1.5rem;
+                color: $navy;
+            }
+            p {
+                font-size: 1.1rem;
+                color: $noir;
+                opacity: 0.85;
+                line-height: 1.7;
+            }
+        }
+        .mission-animation {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    /* Stats */
+    .stats-section {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 5rem;
+        text-align: center;
+        flex-wrap: wrap;
+        .stat {
+            h3 {
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                color: $navy;
+            }
+            p {
+                font-size: 1rem;
+                color: $mist;
+                font-weight: 500;
+                .stat-icon {
+                    margin-right: 0.5rem;
+                    color: $navy;
+                }
+            }
+        }
+    }
+    /* Privacy Section */
+    .privacy-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-bottom: 6rem;
+        padding: 3rem;
+        border-radius: 2rem;
+        flex-wrap: wrap;
+        background: lighten($mist, 20%);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        .privacy-text {
+            flex: 1;
+            h2 {
+                font-size: clamp(1.8rem, 4vw, 2.8rem);
+                margin-bottom: 1.5rem;
+                color: $navy;
+            }
+            p {
+                font-size: 1.1rem;
+                color: $noir;
+                opacity: 0.9;
+                line-height: 1.7;
+            }
+        }
+        .privacy-animation {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    /* Cards */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+        .card {
+            background: rgba(249, 248, 247, 0.9); // ivory with transparency
+            backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+            border: 1px solid rgba(173, 184, 187, 0.4); // mist
+            &:hover {
+                transform: translateY(-10px) scale(1.03);
+                box-shadow: 0 18px 40px rgba(21, 49, 71, 0.45); // navy glow
+                border-color: $navy;
+            }
+            .icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: $navy;
+                display: inline-block;
+                transition: transform 0.4s ease;
+            }
+            &.hovered .icon {
+                animation: icon-bounce 0.8s ease-in-out;
+            }
+            h3 {
+                margin-bottom: 0.8rem;
+                color: $navy;
+                font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: $noir;
+                opacity: 0.85;
+            }
+        }
+    }
+    /* Why Section with Lottie */
+    .why-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-bottom: 6rem;
+        flex-wrap: wrap;
+        .why-text {
+            flex: 1;
+            h2 {
+                font-size: clamp(1.8rem, 4vw, 2.8rem);
+                margin-bottom: 1.5rem;
+                color: $navy;
+            }
+            p {
+                font-size: 1.1rem;
+                color: $noir;
+                opacity: 0.9;
+                line-height: 1.7;
+            }
+        }
+        .why-animation {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 250px;
+            .lottie-animation {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+                border-radius: 1rem;
+                background: $ivory;
+            }
+        }
+    }
+    /* Media Queries for better responsiveness */
+    @media (max-width: 768px) {
+        .mission-section,
+        .privacy-section,
+        .why-section {
+            flex-direction: column;
+            text-align: center;
+            .mission-text,
+            .privacy-text,
+            .why-text {
+                order: 1;
+            }
+            .mission-animation,
+            .privacy-animation,
+            .why-animation {
+                order: 2;
+            }
+        }
+    }
+}
+
+
+/* Animations (unchanged) */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes waveMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes icon-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

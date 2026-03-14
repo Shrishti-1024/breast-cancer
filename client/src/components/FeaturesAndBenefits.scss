@@ -1,0 +1,180 @@
+/* ===== Brand Palette ===== */
+
+$ivory: #F9F8F7;
+$mist: #ADB8BB;
+$navy: #153147;
+$almond: #EDEAE4;
+$noir: #232A2F;
+$shadow: rgba(21, 49, 71, 0.15);
+
+/* ===== Features Section (Clean Background) ===== */
+
+.features-section {
+    padding: 4rem 6%;
+    background: linear-gradient(135deg, $ivory, $almond); // CLEAN, NO COLOR SPOTS
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .features-header {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        position: relative;
+        z-index: 2;
+        h2 {
+            font-size: 2.4rem;
+            color: $navy;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        p {
+            font-size: 1.05rem;
+            color: $mist;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    .features-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+    .feature-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.4rem;
+        box-shadow: 0 10px 26px $shadow;
+        padding: 2rem 1.5rem;
+        flex: 1 1 260px;
+        max-width: 320px;
+        backdrop-filter: blur(9px);
+        border: 1px solid rgba($mist, 0.25);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba($navy, 0.22);
+            background: linear-gradient(145deg, lighten($almond, 10%), $ivory);
+        }
+        .icon {
+            font-size: 2.2rem;
+            color: $navy;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba($navy, 0.25);
+        }
+        h3 {
+            font-size: 1.25rem;
+            color: $navy;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 0.95rem;
+            color: $noir;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+    }
+    /* 📱 Responsive */
+    @media (max-width: 768px) {
+        .features-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-card {
+            max-width: 90%;
+        }
+    }
+}
+
+
+/* ===== Brand Palette ===== */
+
+$ivory: #F9F8F7;
+$mist: #ADB8BB;
+$navy: #153147;
+$almond: #EDEAE4;
+$noir: #232A2F;
+$shadow: rgba(21, 49, 71, 0.15);
+
+/* ===== Features Section (Clean Background) ===== */
+
+.features-section {
+    padding: 4rem 6%;
+    background: linear-gradient(135deg, $ivory, $almond); // CLEAN, NO COLOR SPOTS
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .features-header {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        position: relative;
+        z-index: 2;
+        h2 {
+            font-size: 2.4rem;
+            color: $navy;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        p {
+            font-size: 1.05rem;
+            color: $mist;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    .features-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+    .feature-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.4rem;
+        box-shadow: 0 10px 26px $shadow;
+        padding: 2rem 1.5rem;
+        flex: 1 1 260px;
+        max-width: 320px;
+        backdrop-filter: blur(9px);
+        border: 1px solid rgba($mist, 0.25);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba($navy, 0.22);
+            background: linear-gradient(145deg, lighten($almond, 10%), $ivory);
+        }
+        .icon {
+            font-size: 2.2rem;
+            color: $navy;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba($navy, 0.25);
+        }
+        h3 {
+            font-size: 1.25rem;
+            color: $navy;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 0.95rem;
+            color: $noir;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+    }
+    /* 📱 Responsive */
+    @media (max-width: 768px) {
+        .features-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-card {
+            max-width: 90%;
+        }
+    }
+}

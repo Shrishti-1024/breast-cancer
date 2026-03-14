@@ -1,0 +1,117 @@
+/* ===== Professional palette tokens ===== */
+
+$ivory: #f9f8f7;
+$almond: #edeae4;
+$mist: #adb8bb;
+$navy: #153147;
+$noir: #232a2f;
+
+/* ===== Footer Styling ===== */
+
+.footer {
+    background: linear-gradient(135deg, $navy, $noir);
+    color: $ivory;
+    padding: 3rem 8% 2rem;
+    font-family: "Segoe UI", sans-serif;
+    box-sizing: border-box;
+    margin-top: auto; // lets it sit at the bottom when you use a flex layout
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+    /* Brand */
+    .footer-brand {
+        flex: 1 1 260px;
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $ivory;
+            margin-bottom: 0.6rem;
+        }
+        p {
+            font-size: 0.9rem;
+            color: $mist;
+            max-width: 320px;
+            line-height: 1.5;
+        }
+    }
+    /* Quick links */
+    .footer-links {
+        flex: 1 1 180px;
+        h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: $ivory;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                margin: 0.3rem 0;
+                a {
+                    text-decoration: none;
+                    color: $almond;
+                    font-size: 0.9rem;
+                    transition: 0.3s ease;
+                    &:hover {
+                        color: lighten($almond, 10%);
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+    /* Social section */
+    .footer-socials {
+        flex: 1 1 200px;
+        h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: $ivory;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            a {
+                font-size: 1.2rem;
+                color: $mist;
+                transition: transform 0.25s ease, color 0.25s ease;
+                &:hover {
+                    transform: scale(1.15) translateY(-2px);
+                    color: lighten($navy, 20%);
+                }
+            }
+        }
+    }
+    /* Footer bottom */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-size: 0.85rem;
+        color: lighten($mist, 15%);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 1rem;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+        padding: 2.5rem 1.5rem 2rem;
+        .footer-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: 600px) {
+        .footer-brand h3 {
+            font-size: 1.4rem;
+        }
+        .footer-links ul li a,
+        .footer-bottom {
+            font-size: 0.8rem;
+        }
+    }
+}
