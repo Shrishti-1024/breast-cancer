@@ -87,25 +87,7 @@ breast-cancer
 
 ---
 
-## Screenshots
 
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### Upload Scan Page
-
-![Upload Scan](screenshots/upload.png)
-
-### Prediction Result
-
-![Prediction Result](screenshots/result.png)
-
-### Generated Report
-
-![Report](screenshots/report.png)
-
----
 
 ## Future Improvements
 
